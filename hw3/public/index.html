@@ -1,0 +1,183 @@
+<!-- author: Kanoa Martin -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cheesecake</title>
+		<link rel="stylesheet" href="stylesheets/cheeseStyle.css">
+
+		<!-- javascript to handle submissions-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/></script>
+		<script src="javascripts/stuff.js"></script>
+			<!--$(document).ready(function(){
+
+				//code to switch month based on button
+				$('#Jan').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+				$('#Feb').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+
+				$('#Mar').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+				$('#Apr').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+				$('#May').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+				$('#Jun').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+				$('#Jul').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+				$('#Aug').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+				$('#Sep').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+				$('#Oct').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+				$('#Nov').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+				$('#Dec').click(function(){
+					document.getElementById("dropbtn").textContent = this.value;
+				});
+
+
+				//when submit is clicked
+				$('#submit').click(function(){
+
+					//hide all inputs
+					$(document.getElementById("h3")).hide();
+					$(document.getElementById("submit")).hide();
+					$(document.getElementById("options")).hide();
+					$(document.getElementById("notebox")).hide();
+
+					//store inputs in variables
+					var selectedTopping = document.getElementById("topping").value;
+					var selectedQuantity = document.getElementById("quantity").value;
+					var notesText = document.getElementById("notes").value;
+
+					//set spans to inputs
+					document.getElementById('topResult').textContent = selectedTopping;
+
+					document.getElementById('quanResult').textContent = selectedQuantity;
+
+					document.getElementById('noteResult').textContent = notesText;
+					
+					//check if notes contains vegan
+					if(notesText.toLowerCase().indexOf("vegan") != -1){
+						alert("Cheesecake contains cheese, which is not vegan!")
+					}
+
+					//show results of order
+					$('#results').show();
+
+				});
+
+
+			}); -->
+	</head>
+
+	<body>
+		<!-- head of page-->
+		<h1>
+		Cheesecake Order Form
+		</h1>
+
+		<!--cheesecake images-->
+		<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="cheesecake" width="300" height="300">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_Special_Cheese_Cake_with_Melons_from_New_Burgh_Cafe.jpg/250px-A_Special_Cheese_Cake_with_Melons_from_New_Burgh_Cafe.jpg" alt="cheesecake2" width="300" height="300">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Cake_with_jam.jpg" alt="cheesecake2" width="300" height="300">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Cheese_cake_of_American_and_Italian_style.jpg/1280px-Cheese_cake_of_American_and_Italian_style.jpg" alt="cheesecake2" width="300" height="300">
+
+
+		<p id="results">
+			<br>
+			Thank you for your order!
+			Details:<br>
+			Topping: <span id="topResult"></span> <br>
+			Quantity: <span id="quanResult"></span><br>
+			Notes: <span id="noteResult"></span>
+		</p>
+
+		<!--selector for type and amount of toppings-->
+		<h3 id="h3">
+		Quantity Topping
+		</h3>
+
+		<form style="display: flex; align-items: center; gap: 5px;" id="options">
+			<select name="quantity" id="quantity">
+  				<option value="1">1</option>
+ 				<option value="2">2</option>
+  				<option value="3">3</option>
+  				<option value="4">4</option>
+  				<option value="5">5</option>
+  				<option value="6">6</option>
+			</select>
+
+  			<div style="display: flex; flex-direction: column;">
+
+  				<div style="display: flex; flex-direction: center;">
+  					<input type="radio" id="topping" name="topping" value="Plain">
+  					<label for="plain">Plain</label><br>
+    				</div>
+
+    				<div style="display: flex; flex-direction: center;">
+  					<input type="radio" id="topping" name="topping" value="Cherry">
+  					<label for="cherry">Cherry</label><br>
+    				</div>
+
+    				<div style="display: flex; flex-direction: center;">
+  					<input type="radio" id="topping" name="topping" value="Chocolate">
+  					<label for="chocolate">Chocolate</label>
+    				</div>
+  			</div>
+		</form>
+
+		<!--text box for notes-->
+    	<div style="display: flex; flex-direction: column;" id="notebox">
+			<label for="notes">Notes:</label>
+			<textarea name="notes" id="notes" style="width:500px; height:100px;" placeholder="Enter any special instructions here." ></textarea>
+		</div>
+
+		<button id="submit" type="submit">Submit</button>
+
+		<!--total orders-->
+		<div style="display: flex; flex-direction: row;">
+		<h2>Orders for</h2>
+
+		<div class="dropdown" id="dropdown">
+			<button class="dropbtn" id="dropbtn">Jan</button>
+				<div class="dropdown-content">
+					<option value="Jan" id="Jan">Jan</option>
+					<option value="Feb" id="Feb">Feb</option>
+					<option value="Mar" id="Mar">Mar</option>
+					<option value="Apr" id="Apr">Apr</option>
+					<option value="May" id="May">May</option>
+					<option value="Jun" id="Jun">Jun</option>
+					<option value="Jul" id="Jul">Jul</option>
+					<option value="Aug" id="Aug">Aug</option>
+					<option value="Sep" id="Sep">Sep</option>
+					<option value="Oct" id="Oct">Oct</option>
+					<option value="Nov" id="Nov">Nov</option>
+					<option value="Dec" id="Dec">Dec</option>
+				</div>
+			</div> 
+		</div>
+
+		<ul>
+  			<li>11 cherry</li>
+  			<li>17 chocolate</li>
+  			<li>31 plain</li>
+		</ul>
+	</body>
+</html>
+
+

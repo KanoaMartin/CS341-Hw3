@@ -1,0 +1,73 @@
+/*author: Kanoa Martin*/
+
+body {
+	background: linear-gradient(to top, rgb(108, 100, 114) 0%, rgb(108, 100, 114) 50%, rgb(164, 81, 81) 50%,rgb(164, 81, 81) 100%)
+
+}
+
+h1{
+	font-family: 'Lucida Handwriting', Lucidia, cursive;
+	text-align: center;
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+}
+img{
+	display: inline-block;
+	border-radius: 8px;
+}
+
+div1{
+	background-image: url(https://icons.iconarchive.com/icons/microsoft/fluentui-emoji-flat/512/Cheese-Wedge-Flat-icon.png);
+	background-position-y: -40px;
+	background-size: 15px;
+	font-weight: bolder;
+
+}
+#results{
+	display: none;
+}
+
+/*Dropdown menu code starter from w3schools.com*/
+.dropbtn {
+  background-color: #aa04a7;
+  color: white;
+  padding: 16px;
+  font-size: 10px;
+  border: none;
+  overflow: auto;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default), scoll settings included*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: auto;
+  height: 50px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
